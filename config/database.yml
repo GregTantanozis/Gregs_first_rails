@@ -24,4 +24,4 @@ production:
   adapter: postgresql
   encoding: unicode
   # <<: *default
-  database: db/production.postgresql
+  database: db/production.sqlite3
