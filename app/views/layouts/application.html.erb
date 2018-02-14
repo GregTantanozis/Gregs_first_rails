@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GregsFirstRails</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link src="js/scripts.js"></link>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<%= csrf_meta_tags %>
+  </head>
+
+  <body class="page-wrap">
+
+  	<nav class="navbar-inverse navbar-fixed-top navbar-collapse">
+  	  <ul class="navbar-nav">
+        <li><%= link_to "Welcome", root_path %></li>
+        <li><%= link_to "Home", simple_pages_index_path %></li>
+        <li><%= link_to "About", simple_pages_about_path %></li>
+        <li><%= link_to "Contact", simple_pages_contact_path %></li>
+        <li><%= link_to "Products", products_path %></li>
+        <li><%= link_to "Orders", orders_path %></li>
+        <li><%= form_with(url: products_path, id: 'search', method: 'get', local: true) do |form| %>
+              <%= form.submit 'Search', id: 'search_button' %>
+              <%= form.text_field :q, id: 'q', value: params[:q] %>
+            <% end %>      
+        </li>
+      </ul>
+      <ul class="nav pull-right">
+        <li>
+        <% if user_signed_in? %>
+          <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+        <% else %>
+          <%= link_to('Login', new_user_session_path) %>
+        <% end %>
+        </li>
+      </ul>
+    </nav>   
+
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
+    <%= yield %>
+
+  	<footer class="site-footer">
+  	  &copy; 2017 Tarzan Bros
+  	</footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </body>
+</html>
