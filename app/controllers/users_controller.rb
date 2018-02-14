@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  protect_from_forgery prepend: true
   before_action :authenticate_user!, except: [:show, :index]
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   load_and_authorize_resource
