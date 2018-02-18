@@ -5,6 +5,11 @@
       <% f.label :body, "Comments" %>
       <%= f.text_area :body, class: "form-control", placeholder: "Comments", :required => true %>
     </p>
+
+    <p>
+      <div class="rating"></div>
+    </p>
+
     <p>
       <% f.label :rating %>
       <%= f.text_field :rating, class: "rating form-control", placeholder: "Rating" %>
