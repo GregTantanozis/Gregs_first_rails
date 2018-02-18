@@ -55,35 +55,24 @@ a {
 
 			/* NAVIGATION BAR */
 
-.navbar-nav {
-	background-color: orange;
-	display: -webkit-box;
+.navbar-dark .navbar-toggler {
+  border-color: orange;
+  outline: none;
 }
 
-.navbar-nav li {
-	margin: 0 0.2em 0 0.2em;
-	padding-left: 1em;
+#navbarToggleExternalContent ul li a {
+  text-decoration-line: none;
+  text-transform: uppercase;
 }
 
-.navbar-nav a {
-	text-decoration: none;
-	color: #444;;
-	text-align: center;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-}
- 
-nav a:hover {
- 	background-color: orange;
- 	color: $headers-color;
- 	ransition: .3s background-color;
-}
- 
-nav a:active {
-	color: $headers-color;
-	cursor: default;
+#navbarToggleExternalContent {
+  padding-right: 0px;
 }
 
+#navbarToggleExternalContent ul li a:focus {
+  color: $headers-font;
+
+}
 
 			/* LOGIN */
 
@@ -104,12 +93,12 @@ ul.pull-right {
 }
 
 ul.pull-right li a {
-	
 	position: absolute;
 	right: 2em;
 	top: 0;
-	color: black;
+	color: orange;
 }
+
 ul.pull-right li a:hover {
 	color: $headers-color;
 	text-decoration: none;
@@ -144,7 +133,7 @@ ul.pull-right li a:hover {
 	top: -0.18em;
 }
 
-#q, #product_name, #product_image_url, #product_href, #product_genre, #product_price {
+#product_name, #product_image_url, #product_href, #product_genre, #product_price {
 	height: 1.4rem;
 	font-family: $headers-font;
 	background-color: antiquewhite;
@@ -153,7 +142,13 @@ ul.pull-right li a:hover {
 	border-color: antiquewhite;
 }
 
-#search_button, #updateProduct, .form_label {
+#q {
+  position: relative;
+  padding: 0px;
+  top: -1.9em;
+}
+
+#updateProduct, .form_label {
 	background-color: orange;
 	border-color: orange;
 	color: #444;
@@ -161,6 +156,14 @@ ul.pull-right li a:hover {
 	height: 1.5em;
 	margin-top: 0.1em;
 	padding-top: 0;
+}
+
+#search_button {
+	position: relative;
+    left: -82px;
+    color: orange;
+    background-color: #343a40;
+    text-transform: uppercase;
 }
 
 

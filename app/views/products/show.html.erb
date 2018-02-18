@@ -1,34 +1,40 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="row">
 
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
+    <div class="col-md-4 col-xs-12">
+      <div class="product-info-box">
+        <p id="notice"><%= notice %></p>
+        <% cache @product do %>
+          <p class="product-info-text", href="<%= @product.href %>">
+            <h3><%= @product.name %></h3>
+          <p class="product-info-text">
+            <%= @product.genre %>, <%= @product.description %>, <%= number_to_currency(@product.price, unit: 'CHF ', precision: 2) %>
+          </p>
+          <p class="product-info-text">Highest Rating: 
+            <div id="lowest-rating" class="rated" data-score="<%= @product.highest_rating_comment %>"></div>
+          </p>
+          <p class="product-info-text">Lowest Rating: <div id="lowest-rating" class="rated" data-score="<%= @product.lowest_rating_comment %>"></div>
+          </p>
+        <% end %>
+      </div>
+      <%= render 'comments' %>
+    </div>
 
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
+    <div class="col-md-4 col-xs-12">
+      <div>
+        <%= image_tag(@product.image_url, class:"img-responsive", size: "300", data_zoom_image: @product.image_url) %>
+      </div>
+    </div>
 
-<p>
-  <strong>Image url:</strong>
-  <%= image_tag(@product.image_url) %>
-</p>
+    <div class="col-md-4 col-xs-12">
 
-<p>
-  <strong>Href:</strong>
-  <%= @product.href %>
-</p>
-
-<p>
-  <strong>Genre:</strong>
-  <%= @product.genre %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @product.price %> CHF
-</p>
-
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+      <%= render 'shared/new_comment' %>
+      
+      <div class="admin-links">
+        <%= link_to 'Edit', edit_product_path(@product), class: "form_label" %>
+        <%= link_to 'Back', products_path, class: "form_label" %>
+      </div>
+      
+    </div>
+  </div>
+</div>
