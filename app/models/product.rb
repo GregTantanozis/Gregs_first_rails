@@ -2,6 +2,7 @@ class Product < ApplicationRecord
 	validates :name, presence: true
 	has_many :orders
 	has_many :comments
+	ratyrate_rateable "average_rating"
 	def self.search(search_term)
 	    if Rails.env.production?
 	      Product.where("name ilike ?", "%#{search_term}%")
