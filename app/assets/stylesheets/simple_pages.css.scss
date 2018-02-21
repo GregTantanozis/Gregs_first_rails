@@ -48,7 +48,7 @@ p {
 }
 
 a {
-	color: orange;
+	color: #D5574B;
 }
 
 
@@ -56,7 +56,7 @@ a {
 			/* NAVIGATION BAR */
 
 .navbar-dark .navbar-toggler {
-  border-color: orange;
+  border-color: #D5574B;
   outline: none;
 }
 
@@ -69,8 +69,8 @@ a {
   padding-right: 0px;
 }
 
-#navbarToggleExternalContent ul li a:focus {
-  color: $headers-font;
+#navbarToggleExternalContent ul li a:hover {
+  color: antiquewhite;
 
 }
 
@@ -94,10 +94,11 @@ ul.pull-right {
 
 ul.pull-right li a {
 	position: absolute;
-	right: 2em;
-	top: 0;
-	color: orange;
+	right: 1em;
+    top: 0.3em;
+	color: #D5574B;
 }
+
 
 ul.pull-right li a:hover {
 	color: $headers-color;
@@ -114,8 +115,8 @@ ul.pull-right li a:hover {
 }
 
 .btn-block {
-	background-color: orange;
-	border-color: orange;
+	background-color: #D5574B;
+	border-color: #D5574B;
 	color: antiquewhite;
 }
 
@@ -149,8 +150,8 @@ ul.pull-right li a:hover {
 }
 
 #updateProduct, .form_label {
-	background-color: orange;
-	border-color: orange;
+	background-color: #D5574B;
+	border-color: #D5574B;
 	color: #444;
 	font-family: $headers-font;
 	height: 1.5em;
@@ -160,12 +161,12 @@ ul.pull-right li a:hover {
 
 #search_button {
 	position: relative;
-    left: -82px;
-    color: orange;
+    left: -5.5em;
+    top: 0.1em;
+    color: #D5574B;
     background-color: #343a40;
     text-transform: uppercase;
 }
-
 
 			/* LANDING PAGE*/
 
@@ -251,7 +252,10 @@ ul.pull-right li a:hover {
 	padding-right: 1em;
 }
 
-
+			/* ORDERS PAGE */
+.order-name {
+	text-decoration: none;
+}
 
 			/* FOOTER */
 
@@ -260,6 +264,6 @@ ul.pull-right li a:hover {
 }
 
 .site-footer {
-	background: orange;
-	color: #444;
+	background: #444;
+	color: #D5574B;
 }
