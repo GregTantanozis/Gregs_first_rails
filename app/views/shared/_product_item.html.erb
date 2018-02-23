@@ -1,11 +1,12 @@
 
 <div class="col-md-4 col-sm-6 col-xs-12">
   <a href="<%= product1.href %>"><h3><%= product1.name %></h3></a>
-  <p><%= image_tag(product1.image_url, class:"img-responsive", size: "300") begin
-		  puts Please add the right image_url
-		rescue StandardError => e
-		  puts Thanx for adding the right image_url
-		end  %></p>
+  <p><%= image_tag(product1.image_url, class:"img-responsive", size: "300") %></p>
+  <%= begin
+        puts "Please add the right image_url"
+      rescue StandardError => e
+        puts "Thanx for adding the right image_url"
+      end  %>
   <p class="description"><%= product1.description %></p><p class="genre">/<%= product1.genre %>/<%= product1.price %> CHF</p>
   <br>
   <p class="show"><%= link_to 'Show', product1 %></p>

@@ -57,3 +57,4 @@ end
 
 gem 'devise'
 gem 'ratyrate'
+gem 'will_paginate', '~> 3.1.1'
