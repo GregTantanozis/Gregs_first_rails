@@ -1,3 +1,4 @@
+
 <% if signed_in? %>
   <h3>Add a review</h3>
   <%= form_for([@product, @product.comments.build]) do |f| %>
@@ -14,4 +15,6 @@
       <%= f.submit "Submit", class: "form_label btn btn-primary btn-xs" %>
     </p>
   <% end %>
+<% else %>
+  <h3>Sign in to add a review</h3>
 <% end %>

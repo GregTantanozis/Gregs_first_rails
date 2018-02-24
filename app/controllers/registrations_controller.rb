@@ -5,9 +5,7 @@ class RegistrationsController < Devise::RegistrationsController
 
   def create
     super
-    if @user.persisted?
-      UserMailer.welcome(@user).deliver_now
-    end
+    UserMailer.welcome(resource).deliver unless resource.invalid?
   end
 
   def update
