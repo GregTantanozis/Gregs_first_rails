@@ -14,37 +14,39 @@
   <div class="container">
     <div class="row">
       <div class="field col-sm-12 col-md-4">
-        <%= form.label :name %>
-        <%= form.text_field :name, id: :product_name %>
+        <p>
+          <%= form.label :name %>
+          <%= form.text_field :name, id: :product_name, class: "form-control",  :required => true %>
+          <br>
+          <%= form.label :description %>
+          <%= form.text_area :description, id: :product_description, class: "form-control",  :required => true %>
+        </p>
       </div>
 
       <div class="field col-sm-12 col-md-4">
-        <%= form.label :description %>
-        <%= form.text_area :description, id: :product_description %>
-      </div>
-
-      <div class="field col-sm-12 col-md-4">
-        <%= form.label :image_url %>
-        <%= form.text_field :image_url, id: :product_image_url %>
-      </div>
-
-        <div class="field col-sm-12 col-md-4">
-        <%= form.label :href %>
-        <%= form.text_field :href, id: :product_href %>
+        <p>
+          <%= form.label :image_url %>
+          <%= form.text_field :image_url, id: :product_image_url, class: "form-control",  :required => true %>
+          <br>
+          <%= form.label :href %>
+          <%= form.text_field :href, id: :product_href, class: "form-control",  :required => true %>
+        </p>
       </div>
 
        <div class="field col-sm-12 col-md-4">
-        <%= form.label :genre %>
-        <%= form.text_field :genre, id: :product_genre %>
+        <p>
+          <%= form.label :genre %>
+          <%= form.text_field :genre, id: :product_genre, class: "form-control",  :required => true %>
+          <br>
+          <%= form.label :price %>
+          <%= form.text_field :price, id: :product_price, class: "form-control",  :required => true %>
+        </p>
       </div>
 
-      <div class="field col-sm-12 col-md-4">
-        <%= form.label :price %>
-        <%= form.text_field :price, id: :product_price %>
-      </div>
-
-      <div class="actions">
-        <%= form.submit %>
+      <div class="actions col-sm-12 col-md-4">
+        <p>
+          <%= form.submit "Submit", class: "form_label btn btn-primary btn-xs" %>
+        </p>
       </div>
     </div>
   </div>

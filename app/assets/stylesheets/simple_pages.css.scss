@@ -99,12 +99,10 @@ ul.pull-right li a {
 	color: #D5574B;
 }
 
-
 ul.pull-right li a:hover {
 	color: $headers-color;
 	text-decoration: none;
 }
-
 
 .checkbox-label {
 	color: antiquewhite;
@@ -176,11 +174,6 @@ ul.pull-right li a:hover {
 }
 
 			/* HOME PAGE */
-
-.date-home p {
-	text-align: right;
-	margin-bottom: -1.5rem;
-}
 
 .covers {
 	display: flex;
@@ -256,7 +249,15 @@ ul.pull-right li a:hover {
 .order-name {
 	text-decoration: none;
 }
-
+			
+			/* USERS PAGE */
+.user-index {
+	color: antiquewhite;
+}
+.users-title-name {
+	color: $headers-color;
+	margin-right: 1em;
+}
 
 			/* PAGINATION */
 .pagination {
@@ -279,4 +280,16 @@ ul.pull-right li a:hover {
 .site-footer {
 	background: #444;
 	color: #D5574B;
+}
+
+.site-footer p {
+	margin-left: 0.3em;
+	color: $headers-color;
+}
+
+.date-home p {
+	color: $headers-color;
+	text-align: right;
+	margin-bottom: -1.5rem;
+	margin-right: 0.3em;
 }
