@@ -8,8 +8,8 @@ class UserMailer < ApplicationMailer
          subject: "A new contact form message from #{name}")
   end
   def welcome(user)
-	  @appname = "the Tarzan family"
+	  @appname = "the_Tarzan_family"
 	  mail(to: user.email,
-	       subject: "Welcome to #{@the Tarzan family}!")
+	       subject: "Welcome to #{@the_Tarzan_family}!")
 	end
 end
