@@ -9,6 +9,8 @@
             <%= link_to order.product.name, order.product %>    
           </div>
         </h3>
+        <div><%= image_tag(order.product.image_url, class:"img-responsive") %></div>
+        <p><%= order.product.description %></p>
         <p>Total: <%= order.total %> CHF</p>
       </div>
     <% end %>
