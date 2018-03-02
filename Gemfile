@@ -55,6 +55,8 @@ group :production do
   gem 'pg'
 end
 
+gem 'rails_12factor', group: :production
+
 gem 'devise'
 gem 'ratyrate'
 gem 'will_paginate', '~> 3.1.1'
