@@ -259,6 +259,17 @@ ul.pull-right li a:hover {
 	margin-right: 1em;
 }
 
+h4 {
+	color: $headers-color;
+	font-size: 1em;
+}
+
+small {
+	color: $headers-color;
+}
+
+
+
 			/* PAGINATION */
 .pagination {
 	.previous_page { color:antiquewhite; padding: 0px }
